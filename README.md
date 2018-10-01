@@ -1,0 +1,2 @@
+# moux
+personal zsh theme
