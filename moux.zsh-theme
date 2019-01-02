@@ -8,13 +8,13 @@ if [[ -n "$IN_NIX_SHELL" ]]; then
     for package in $packages; do
       package_names+=" ${package##*.}"
     done
-    PROMPT+='%{$fg[yellow]%}{$package_names }%{$reset_color%}'
+    PROMPT+='%{$fg[yellow]%}{$package_names} %{$reset_color%}'
   elif [[ -n $name ]]; then
     local cleanName=${name#interactive-}
     cleanName=${cleanName%-environment}
-    PROMPT+='%{$fg[blue]%}{$cleanName }%{$reset_color%}'
+    PROMPT+='%{$fg[blue]%}$cleanName %{$reset_color%}'
   else # This case is only reached if the nix-shell plugin isn't installed or failed in some way
-    PROMPT+='%{$fg[blue]%}nix-shell {}%{$reset_color%}'
+    PROMPT+='%{$fg[blue]%}nix-shell {} %{$reset_color%}'
   fi
 fi
 
