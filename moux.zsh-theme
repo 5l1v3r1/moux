@@ -22,4 +22,6 @@ PROMPT+='%{$fg[green]%}%~ %{$fg[yellow]%}→ %{$reset_color%}'
 
 # Counting on git-prompt to display git information on the RPROMPT
 # We still want to customize a little bit the prefix to fit the theme
-ZSH_THEME_GIT_PROMPT_PREFIX="λ %{$fg[blue]%}git %{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}git "
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
